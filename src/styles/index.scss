@@ -1,0 +1,90 @@
+body {
+	line-height: 1.4;
+}
+
+::-moz-selection {
+	color: white;
+	background: #ff6600;
+}
+
+::selection {
+	color: white;
+	background: #ff6600;
+}
+
+main {
+	margin: auto;
+	padding: 1.5rem;
+	max-width: 60ch;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 800;
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	a {
+		font-size: small;
+		padding: 6px;
+		color: #ccc;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+h2 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-family: "JetBrainsMonoBold";
+}
+
+p {
+	display: inline-block;
+}
+
+a {
+	line-height: 1.1em;
+	position: relative;
+}
+
+a:visited {
+	color: slategray;
+}
+
+/*
+	  aa - adhnaapp
+	  tsc - thesabunco
+  */
+.aaContainer:before,
+.tscContainer:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	right: -4px;
+	left: -4px;
+	color: white;
+	z-index: -1;
+	border-radius: 3px;
+}
+
+.aa:hover ~ .aaContainer,
+.tsc:hover ~ .tscContainer {
+	color: white;
+	display: inline-block;
+}
+
+.aa:hover ~ .aaContainer::before {
+	background-color: var(--adhanapp-color);
+}
+
+.tsc:hover ~ .tscContainer::before {
+	background-color: var(--thesabun-color);
+}
